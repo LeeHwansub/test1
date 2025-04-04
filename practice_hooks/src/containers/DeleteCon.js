@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { deleteOne } from "../service/member/member";
+import { deleteOne } from "../service/member";
 
 function DeleteCon() {
 
@@ -16,7 +16,6 @@ function DeleteCon() {
 
   return (
     <div>
-      <h1>DeleteCon</h1>
     </div>
   );
 }

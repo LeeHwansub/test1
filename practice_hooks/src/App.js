@@ -6,6 +6,8 @@ import './App.css';
 import HeaderCon from './containers/HeaderCon';
 import {Route,Routes} from "react-router-dom"
 import OnePage from './pages/OnePage';
+import DeletePage from './pages/DeletePage';
+import UpdatePage from './pages/UpdatePage';
 
 
 function App() {
@@ -18,8 +20,8 @@ function App() {
       <Route path="login" element={<LoginPage/>}/>
       <Route path="register" element={<RegPage/>}/>
       <Route path="one" element={<OnePage/>}/>
-      <Route path="delete/:id" element={<MDeletePage/>}/>
-      <Route path="update/:id" element={<MUpdatePage/>}/>
+      <Route path="delete/:id" element={<DeletePage/>}/>
+      <Route path="update/:id" element={<UpdatePage/>}/>
       </Route>
       </Route>
     </Routes>

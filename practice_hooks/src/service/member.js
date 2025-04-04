@@ -60,15 +60,18 @@ const deleteOne = (id) => {
     }
 }
 
-const updateOne = (user) => {
-    const idx = data_set.findIndex(data => data.id === user.id)
-    if(idx !== -1){
-        data_set[idx] = user
-        return 1 //수정 성공
-    }else{
-        return 0 //수정 실패
+function updateOne(id, data) {
+    const members = JSON.parse(localStorage.getItem("members")) || [];
+  
+    const index = members.findIndex(m => m.id === id);
+    if (index !== -1) {
+      members[index] = data;
+      localStorage.setItem("members", JSON.stringify(members));
+      return 1;
     }
-}
+    return 0;
+  }
+  
 
 export { register ,  getList, loginCheck, getOne, deleteOne, updateOne}
 
