@@ -1,0 +1,17 @@
+.test{color:red;}
+#test{background-color: aqua;}
+
+test {color: blue; font-size: 30px;}
+
+test{
+    width: 300px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cusor: pointer;
+    &:hover{
+        background-color: darkblue;
+    }
+}
